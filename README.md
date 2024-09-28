@@ -1,15 +1,15 @@
 # immich-cron-upload
 
-Schedule uploads to immich
+Schedule uploads to [immich](https://github.com/immich-app/immich)
 
 ## Overview
 
 Simple container that allows you to set a cron schedule to upload images to
-[immich](https://github.com/immich-app/immich). Basically just runs `immich upload` on a schedule.
+immich. Basically just runs `immich upload` on a schedule.
 
 ## Running
 
-This app can be run from a [pre-built docker container](https://hub.docker.com/r/evanofslack/immich-cron-upload/tags).
+This app can be run from a [pre-built docker container](https://hub.docker.com/r/evanofslack/immich-cron-upload/tags). See the [immich-cli docs](https://immich.app/docs/features/command-line-interface/) for env var references.
 
 ```yaml
 services:
@@ -39,5 +39,5 @@ services:
 
 ## Compatibility
 
-Currently images are build for amd64, arm64, arm/v6 and arm/v7. The image has been
+Currently images are build for amd64, arm64 and arm/v7. The image has been
 tested and runs on ubuntu and raspi.
