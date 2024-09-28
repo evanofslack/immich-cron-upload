@@ -1,5 +1,4 @@
-ARG ALPINE_VERSION
-FROM alpine:${ALPINE_VERSION}
+FROM alpine:3.20
 ARG TARGETARCH
 
 ADD src/install.sh install.sh
