@@ -1,7 +1,8 @@
 services:
   immich-cron-upload:
     container_name: immich-cron-upload
-    image: evanofslack/immich-cron-upload
+    build:
+      context: .
     volumes:
       - ./import:/import # mount dir to upload immich from
     environment:
