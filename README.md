@@ -5,7 +5,7 @@ Schedule uploads to immich
 ## Overview
 
 Simple container that allows you to set a cron schedule to upload images to
-immich. Basically just runs `immich upload` on a schedule.
+[immich](https://github.com/immich-app/immich). Basically just runs `immich upload` on a schedule.
 
 ## Running
 
@@ -28,7 +28,7 @@ services:
 
       # Immich boolean env vars don't respect setting as true or false.
       # If set (regardless of value), they are interpreted as true.
-      # Therefore, just uncomment to enable.
+      # Therefore, just comment/uncomment to enable/disable.
       IMMICH_RECURSIVE:
       IMMICH_AUTO_CREATE_ALBUM:
       IMMICH_DELETE_ASSETS:
