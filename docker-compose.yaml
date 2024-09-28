@@ -1,0 +1,26 @@
+services:
+  immich-upload:
+    container_name: immich-upload
+    build:
+      context: .
+      args:
+        ALPINE_VERSION: "3.20"
+    volumes:
+      - ./import:/import
+    environment:
+      # SCHEDULE: "@weekly" # optional, accepts cron syntax
+      IMMICH_INSTANCE_URL: http://10.33.1.114:2283/api
+      IMMICH_API_KEY: zbwrdvWuguBXiiSG2cpdZxJtSuLXQKoDK9mtLYY
+      # IMMICH_IGNORE_PATHS: [] # optional
+      # IMMICH_UPLOAD_CONCURRENCY: 4 # optional
+      # IMMICH_ALBUM_NAME: "" # optional
+
+      # Immich boolean env vars don't respect setting as true or false.
+      # If set (regardless of value), they are interpreted as true.
+      # Therefore, just uncomment to enable.
+      IMMICH_RECURSIVE:
+      IMMICH_AUTO_CREATE_ALBUM:
+      IMMICH_DELETE_ASSETS:
+      IMMICH_DRY_RUN:
+      # IMMICH_SKIP_HASH:
+      # IMMICH_INCLUDE_HIDDEN:
